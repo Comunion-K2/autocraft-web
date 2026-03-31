@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoCraft - 所有Skill</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      min-height: 100vh;
+      color: #333;
+    }
+    .navbar {
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1a237e;
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+    .nav-links a {
+      color: #555;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover {
+      color: #ff6f00;
+    }
+    .nav-links a.active {
+      color: #ff6f00;
+      font-weight: 600;
+    }
+    .login-btn {
+      background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+      color: white;
+      border: none;
+      padding: 0.5rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .login-btn:hover {
+      transform: translateY(-2px);
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    .page-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .page-header h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #1a237e;
+      margin-bottom: 1rem;
+    }
+    .page-header p {
+      font-size: 1.2rem;
+      color: #666;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .skill-card {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+      cursor: pointer;
+    }
+    .skill-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+      border-color: #ff6f00;
+    }
+    .skill-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .skill-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1a237e;
+      margin-bottom: 0.5rem;
+    }
+    .skill-desc {
+      color: #666;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .tag {
+      background: #e3f2fd;
+      color: #1a237e;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+    .use-btn {
+      width: 100%;
+      background: linear-gradient(135deg, #ff6f00 0%, #ff9100 100%);
+      color: white;
+      border: none;
+      padding: 0.75rem;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .use-btn:hover {
+      background: linear-gradient(135deg, #e65100 0%, #ff6d00 100%);
+      transform: scale(1.02);
+    }
+    .skill-stats {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+    .stat {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+      }
+      .nav-links {
+        gap: 1rem;
+      }
+      .page-header h1 {
+        font-size: 2.5rem;
+      }
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="logo">🚀 AutoCraft</a>
+    <div class="nav-links">
+      <a href="index.html">首页</a>
+      <a href="skills.html" class="active">所有Skill</a>
+      <a href="#">我的项目</a>
+      <a href="gstack.html">gstack</a>
+    </div>
+    <button class="login-btn" onclick="alert('🔐 OpenClaw登录功能开发中...')">OpenClaw登录</button>
+  </nav>
+
+  <div class="container">
+    <div class="page-header">
+      <h1>所有Skill</h1>
+      <p>一键使用OpenClaw Skill，让复杂任务变得简单</p>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-card" onclick="showSkillInfo('gstack专家')">
+        <div class="skill-icon">🧠</div>
+        <h3 class="skill-title">gstack专家</h3>
+        <p class="skill-desc">世界顶级思维合集，融合Google Staff Engineer、Martin Fowler工程思维、Paul Graham创业思维</p>
+        <div class="skill-tags">
+          <span class="tag">AI分析</span>
+          <span class="tag">思维框架</span>
+          <span class="tag">决策支持</span>
+        </div>
+        <button class="use-btn" onclick="useSkill('gstack专家')">立即使用</button>
+        <div class="skill-stats">
+          <div class="stat">📊 1254次使用</div>
+          <div class="stat">⭐ 4.9/5.0</div>
+        </div>
+      </div>
+      
+      <div class="skill-card" onclick="showSkillInfo('文件管理器')">
+        <div class="skill-icon">📁</div>
+        <h3 class="skill-title">文件管理器</h3>
+        <p class="skill-desc">智能文件整理和分析工具，自动分类、标签和搜索</p>
+        <div class="skill-tags">
+          <span class="tag">文件管理</span>
+          <span class="tag">自动化</span>
+          <span class="tag">搜索</span>
+        </div>
+        <button class="use-btn" onclick="useSkill('文件管理器')">立即使用</button>
+        <div class="skill-stats">
+          <div class="stat">📊 892次使用</div>
+          <div class="stat">⭐ 4.7/5.0</div>
+        </div>
+      </div>
+      
+      <div class="skill-card" onclick="showSkillInfo('工作流构建器')">
+        <div class="skill-icon">🔧</div>
+        <h3 class="skill-title">工作流构建器</h3>
+        <p class="skill-desc">可视化工作流设计，自动化复杂任务流程</p>
+        <div class="skill-tags">
+          <span class="tag">自动化</span>
+          <span class="tag">工作流</span>
+          <span class="tag">可视化</span>
+        </div>
+        <button class="use-btn" onclick="useSkill('工作流构建器')">立即使用</button>
+        <div class="skill-stats">
+          <div class="stat">📊 756次使用</div>
+          <div class="stat">⭐ 4.8/5.0</div>
+        </div>
+      </div>
+      
+      <div class="skill-card" onclick="showSkillInfo('代码助手')">
+        <div class="skill-icon">💻</div>
+        <h3 class="skill-title">代码助手</h3>
+        <p class="skill-desc">智能代码生成、审查和优化，支持多种编程语言</p>
+        <div class="skill-tags">
+          <span class="tag">编程</span>
+          <span class="tag">代码生成</span>
+          <span class="tag">代码审查</span>
+        </div>
+        <button class="use-btn" onclick="useSkill('代码助手')">立即使用</button>
+        <div class="skill-stats">
+          <div class="stat">📊 2103次使用</div>
+          <div class="stat">⭐ 4.9/5.0</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showSkillInfo(skillName) {
+      alert(`📖 ${skillName} 详细信息\n\n点击"立即使用"按钮开始使用这个Skill！`);
+    }
+    
+    function useSkill(skillName) {
+      alert(`🎯 开始使用 "${skillName}"\n\n正在启动Skill...\n请稍候！`);
+    }
+    
+    // 导航激活状态
+    document.addEventListener('DOMContentLoaded', function() {
+      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        const linkPage = link.getAttribute('href');
+        if (currentPage === linkPage) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

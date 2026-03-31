@@ -1,0 +1,14 @@
+{
+  "project": "AutoCraft Web UI",
+  "version": "1.0.0",
+  "environment": "dev",
+  "deploy_time": "2026-03-30T01:15:42Z",
+  "git_commit": "6b0ed08",
+  "deployed_by": "k2",
+  "features": [
+    "首页",
+    "Skill页面",
+    "响应式设计",
+    "交互功能"
+  ]
+}

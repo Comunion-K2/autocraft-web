@@ -1,0 +1,16 @@
+{
+  "version": "v1.1.0",
+  "release_date": "2026-03-31",
+  "features": [
+    "现代化首页",
+    "完整Skill页面",
+    "gstack专家系统",
+    "响应式设计",
+    "交互功能"
+  ],
+  "changelog": {
+    "added": ["gstack专家页面", "思维框架展示", "专家咨询功能"],
+    "improved": ["导航菜单", "用户体验"],
+    "fixed": []
+  }
+}
